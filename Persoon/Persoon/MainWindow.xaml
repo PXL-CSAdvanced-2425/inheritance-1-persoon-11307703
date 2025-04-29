@@ -1,0 +1,31 @@
+﻿<Window x:Class="Persoon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Persoon"
+        mc:Ignorable="d"
+        Title="Inheritance - Person" Height="450" Width="800">
+   
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,10">
+                    <Button Name="btnStudent" Content="Student" Width="180" Height="40" Margin="0,0,10,0" Click="btnStudent_Click"/>
+                    <Button Name="btnLector" Content="Lector" Width="180" Height="40" Margin="0,0,10,0" Click="btnLector_Click"/>
+                    <Button Name="btnPersoon" Content="Persoon" Width="180" Height="40" Margin="0,0,10,0" Click="btnPersoon_Click"/>
+                    <TextBox Name="txtEmail" Width="180" Height="40" VerticalContentAlignment="Center"
+                     Text="E-mail voor klasse Persoon" Foreground="Gray"/>
+        </StackPanel>
+
+                <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1">
+                    <ScrollViewer>
+                        <ListBox Name="itemListBox" Padding="10"/>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+        </Window>
+    
