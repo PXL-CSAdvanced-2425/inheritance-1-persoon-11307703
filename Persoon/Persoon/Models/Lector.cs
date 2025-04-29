@@ -54,7 +54,7 @@ namespace Persoon.Models
         public string PrintInService()
         {
             //geeft eigenschap FullName() uit klasse Person + "is in dienst sinds: " + InService (kort datumnotatie)
-          return  $"{base.FullName()} is in dienst sinds: {this.InService}";
+          return  $"{base.FullName()} is in dienst sinds: {this.InService.ToShortDateString()}";
         }
 
         public string PrintAdress()
