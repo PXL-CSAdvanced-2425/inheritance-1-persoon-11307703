@@ -45,7 +45,9 @@ namespace Persoon
 
         private void btnPersoon_Click(object sender, RoutedEventArgs e)
         {
-            itemListBox.Items.Clear();
+            Person selectedPerson = itemListBox.SelectedItem as Person;
+            selectedPerson.Email = txtEmail.Text;
+            selectedPerson.Info(selectedPerson.Email);
 
         }
     }
